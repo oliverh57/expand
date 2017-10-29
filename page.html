@@ -1,109 +1,102 @@
-
 <!DOCTYPE html>
-
-
-
-
-
-    
-
-
-
-    
-
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F5A9E421-986D-C449-896D-D32BD40FBE11/main.js" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <title>YT2MP3</title>
-    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F5A9E421-986D-C449-896D-D32BD40FBE11/main.js" charset="UTF-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script src="/expand.js"></script>
+	<title>Expand</title>
 
 
-    
-    <!--this is for testing please dont kill me thank you-->
-    <style>
-    html {
-    position: relative;
-    min-height: 100%;
-}
-body {
-    margin: 0 0 0px;
-    /* bottom = footer height */
-    padding: 0px;
-}
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow:hidden;
-}
-    </style>
-    
-    <script>
-    
-    function GetElement()
-    {
-        var changeIt = document.getElementById('loading');
-        changeIt.style.visibility = 'hidden';
-    }
-    function load(){
-        var changeIt = document.getElementById('loading');
-        changeIt.style.visibility = 'visible';
-        document.getElementById("submit").classList.add('is-loading');
-        }
-        
-        
-    </script>
-    
+
+
+	<!--this is for testing please dont kill me thank you-->
+	<style>
+		html {
+			position: relative;
+			min-height: 100%;
+		}
+
+		body {
+			margin: 0 0 0px;
+			/* bottom = footer height */
+			padding: 0px;
+		}
+
+		footer {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 100px;
+			width: 100%;
+			overflow: hidden;
+		}
+
+	</style>
+
+	<script>
+		function GetElement() {
+			var changeIt = document.getElementById('loading');
+			changeIt.style.visibility = 'hidden';
+		}
+
+		function load() {
+			var changeIt = document.getElementById('loading');
+			changeIt.style.visibility = 'visible';
+			document.getElementById("submit").classList.add('is-loading');
+		}
+
+	</script>
+
 </head>
 
 
 <body onload="GetElement();">
 
 
-<div class="has-text-centered">
-    <!--<h1 class="title">YT<b>2</b>MP3</h1>-->
-    
-<section class="hero is-primary is-bold">
-  <div class="hero-body container">
-      <h1 class="title">Binomial Expansion</h1>
-      <h2 class="subtitle">(a+b)^n</h2>
-    </div>
-</section>
-    
-    <section class="section">
-    <div id="YTform" class="notification has-addons">
-    <form action="" method="GET">
-    
-    <div class="field">
-		<span><label class="label">Video URL</label><input class="input" name="url" type="input" placeholder="#Expresion" required></span>
-    </div>
-    
-    <div class="field">
-    <label class="label">Filename to be saved as</label>
-    <input class="input" name="filename" type="input" placeholder="Download.mp3">
-    </div>
-    <div class="has-text-centered field">
-        <div class="has-text-centered control">
-            <button onclick="load();" id="submit" class="button is-success">Begin!</button>
-        </div>
-        <div class="has-text-centered control">
-            <button onclick="alert('Go away then')" class="button is-text">Cancel</button>
-       </div>
-    </div>
-    </form>
-    
-    <br><p id="loading">Please wait a few moments while we get your video!</p>
-    
-    </div id="YTform" class="box">
-    </section>
-        <p>Once you submit the form, the page will load for a few seconds, then you'll be redirected to your mp3.</p>
-</div>
-    
-    
-    <footer class="footer"><center><p>Expand &copy; Oliver Hynds 2017</p></center></footer>
+	<div class="has-text-centered">
+		<!--<h1 class="title">YT<b>2</b>MP3</h1>-->
+
+		<section class="hero is-dark is-bold">
+			<div class="hero-body container">
+				<h1 class="title">Binomial Expansion</h1>
+				<h2 class="subtitle">(a+b)^n</h2>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="notification has-addons">
+
+
+					<div class="field has-addons">
+						<p class="control">
+							<a class="button is-static">(a+b)^</a>
+						</p>
+						<div class="control">
+							<input class="input" type="text" placeholder="power">
+						</div>
+						<div class="control">
+							<a class="button is-info" id="submit" onclick="load();">Calculate</a>
+						</div>
+					</div>
+
+
+
+				<br>
+				<p id="loading">Expandnig</p>
+
+			</div>
+		</section>
+		
+	</div>
+
+
+	<footer class="footer">
+		<center>
+			<p>Expand &copy; Oliver Hynds 2017</p>
+		</center>
+	</footer>
 </body>
+
 </html>
