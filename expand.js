@@ -15,6 +15,7 @@ function value(row, index) {
 
 
 function pasc(n) {
+	n = +n + +1;
     finished = false;
     var r = [];
     for (var i = 1; i <= n; i++) {
